@@ -92,7 +92,7 @@ Source10: nginx.suse.logrotate
 Source11: nginx-debug.service
 Source12: COPYRIGHT
 Source13: nginx.check-reload.sh
-Source100: https://github.com/nginx-shib/nginx-http-shibboleth/archive/v2.0.1.tar.gz
+Source100: nginx-http-shibboleth-v2.0.1.tar.gz
 
 License: 2-clause BSD-like license
 
