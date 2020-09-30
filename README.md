@@ -7,6 +7,15 @@ This repository contains a spec file to build nginx rpms which include the
 module. It is intended to be used via [copr](https://copr.fedorainfracloud.org)
 which should react to tags in this repository and build new RPMS. 
 
+## Using the packages
+
+You can use the packages (at your own risk) by enabling the copr repository
+
+```bash
+$ yum install yum-plugin-copr
+$ yum copr enable ianabc/nginx-shibboleth
+$ yum --enablerepo=copr:copr.fedorainfracloud.org:ianabc:nginx-shibboleth install nginx
+```
 
 ## Overview
 
