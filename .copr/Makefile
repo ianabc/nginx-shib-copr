@@ -1,4 +1,4 @@
 srpm:
-	./prep.sh
+	./prep-sources.sh
 	rpmbuild --define "_topdir `pwd`" -bs SPECS/nginx.spec
 	cp SRPMS/*.src.rpm $(outdir)/
