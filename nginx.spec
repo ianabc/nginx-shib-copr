@@ -338,6 +338,9 @@ if [ $1 -ge 1 ]; then
 fi
 
 %changelog
+* Wed Sep 30 2020 Unknown name
+- 
+
 * Wed Sep 30 2020 Unknown name 1.18.0-1.el7.ngx
 - new package built with tito
 
