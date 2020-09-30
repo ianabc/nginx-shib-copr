@@ -23,3 +23,5 @@ rpm2cpio ../SRPMS/${SRPM} | cpio -i
 
 curl -Lo nginx-http-shibboleth-${NGX_SHIB_VERSION}.tar.gz \
     https://github.com/nginx-shib/nginx-http-shibboleth/archive/${NGX_SHIB_VERSION}.tar.gz
+
+chown -R mockbuild SRPMS SOURCES
