@@ -92,7 +92,7 @@ Source10: nginx.suse.logrotate
 Source11: nginx-debug.service
 Source12: COPYRIGHT
 Source13: nginx.check-reload.sh
-Source100: nginx-http-shibboleth-v2.0.1.tar.gz
+Source100: https://github.com/nginx-shib/nginx-http-shibboleth/archive/v2.0.1.tar.gz
 
 License: 2-clause BSD-like license
 
@@ -338,6 +338,9 @@ if [ $1 -ge 1 ]; then
 fi
 
 %changelog
+* Wed Sep 30 2020 Unknown name 1.18.0-1.el7.ngx
+- new package built with tito
+
 * Tue Apr 21 2020 Konstantin Pavlov <thresh@nginx.com>
 - 1.18.0
 
