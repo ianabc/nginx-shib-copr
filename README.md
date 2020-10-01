@@ -38,9 +38,13 @@ identical to upstream with the following exceptions
   3. In the `%prep` section
     a. `mkdir -p %{bdir}/src/http/modules/shibboleth`
     b. `tar --strip-components=1 -C %{bdir}/src/http/modules/shibboleth -zxvf %{SOURCE100}`
+  4. Update the release number, upstream uses `1%{dist}` so we generally use
+     `1.x%{dist}` and increment x as needed.
 
-When a new release is tagged in this repository, copr should notice and start
-the rebuild process. There are two steps in the rebuild process: `make-srpm`
+When this repository is pushed to github, copr should notice and start
+the rebuild process. Generally it is best to tag this repository as well but
+the tag/release webhook doesn't seem to work reliable on copr. There are two
+steps in the rebuild process: `make-srpm`
 will build an `.src.rpm` and copr will compile that into the nginx packages.
 	./prep-sources.sh
 	rpmbuild --define "_topdir `pwd`" -bs SPECS/nginx.spec

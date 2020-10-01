@@ -62,7 +62,7 @@ Requires(pre): shadow-utils
 # end of distribution specific definitions
 
 %define main_version 1.18.0
-%define main_release 1%{?dist}.ngx
+%define main_release 1.1%{?dist}.ngx
 
 %define bdir %{_builddir}/%{name}-%{main_version}
 
