@@ -42,3 +42,21 @@ identical to upstream with the following exceptions
 When a new release is tagged in this repository, copr should notice and start
 the rebuild process. There are two steps in the rebuild process: `make-srpm`
 will build an `.src.rpm` and copr will compile that into the nginx packages.
+	./prep-sources.sh
+	rpmbuild --define "_topdir `pwd`" -bs SPECS/nginx.spec
+	cp SRPMS/*.src.rpm $(outdir)/
+
+## Manual Build
+
+On a machine with the usual [rpm build
+environment](https://wiki.centos.org/HowTos/SetupRpmBuildEnvironment) nginx is
+very easy to build.
+```bash
+rpmbuild -bs SPECS/nginx.spec
+```
+Should build an SRPM or 
+```bash
+rpmbuild -ba SPECS/nginx.spec
+```
+Should build everything, the nice thing about copr is that the results are
+hosted and ready for yum to consume.
