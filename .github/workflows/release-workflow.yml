@@ -29,6 +29,9 @@ jobs:
             tag_name: ${{ github.ref }}
             release_name: Release ${{ github.ref }}
             body: |
-              Automated release
+              - Automated release
+              - RPMS available in [ianabc/nginx-shibboleth](https://copr.fedorainfracloud.org/coprs/ianabc/nginx-shibboleth/) copr repository
+              - See README.md for install instructions
+
             draft: false
             prerelease: false
