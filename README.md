@@ -41,14 +41,10 @@ identical to upstream with the following exceptions
   4. Update the release number, upstream uses `1%{dist}` so we generally use
      `1.x%{dist}` and increment x as needed.
 
-When this repository is pushed to github, copr should notice and start
-the rebuild process. Generally it is best to tag this repository as well but
-the tag/release webhook doesn't seem to work reliable on copr. There are two
-steps in the rebuild process: `make-srpm`
-will build an `.src.rpm` and copr will compile that into the nginx packages.
-	./prep-sources.sh
-	rpmbuild --define "_topdir `pwd`" -bs SPECS/nginx.spec
-	cp SRPMS/*.src.rpm $(outdir)/
+When this repository is tagged (using the format  vX.Y.Z), a github workflow
+creates a new release and triggers copr via a webhook. There are two steps in
+the rebuild process: `make-srpm` will build an `.src.rpm` then copr will
+compile that into the nginx packages.
 
 ## Manual Build
 
