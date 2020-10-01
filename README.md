@@ -34,11 +34,11 @@ should be updated and a new nginx.spec created. Generally the new nginx will be
 identical to upstream with the following exceptions
 
   1. Add `--add-module=%{bdir}/src/http/modules/shibboleth` to the `BASE_CONFIGURE_ARGS`
-  2. Update `Source100` with the value of the new nginx-http-shibboleth tarball
-  3. In the `%prep` section
-    a. `mkdir -p %{bdir}/src/http/modules/shibboleth`
-    b. `tar --strip-components=1 -C %{bdir}/src/http/modules/shibboleth -zxvf %{SOURCE100}`
-  4. Update the release number, upstream uses `1%{dist}` so we generally use
+  1. Update `Source100` with the value of the new nginx-http-shibboleth tarball
+  1. In the `%prep` section
+    1. `mkdir -p %{bdir}/src/http/modules/shibboleth`
+    1. `tar --strip-components=1 -C %{bdir}/src/http/modules/shibboleth -zxvf %{SOURCE100}`
+  1. Update the release number, upstream uses `1%{dist}` so we generally use
      `1.x%{dist}` and increment x as needed.
 
 When this repository is tagged (using the format  vX.Y.Z), a github workflow
